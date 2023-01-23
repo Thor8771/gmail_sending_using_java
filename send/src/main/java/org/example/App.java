@@ -1,6 +1,8 @@
 package org.example;
 
 import org.example.email.GEmailSender;
+
+import java.io.File;
 import java.util.Scanner;
 
 /**
@@ -16,15 +18,23 @@ public class App
         String to=sc.nextLine();
         String from="shubhamkushwaha8709@gmail.com";
         String subject=" sending email using java";
-        String text="sending email using java without less secure app";
+        String text="sending email using with attachement2";
+        File file=new File("D:\\auroraos.png");
 
         GEmailSender gEmailSender= new GEmailSender();
-        boolean b=gEmailSender.sendEmail(to,from,subject,text);
+        boolean b=gEmailSender.sendEmailWithAttachement(to,from,subject,text,file);
         if(b){
             System.out.println("email is  successfully sent");
         }
         else {
             System.out.println("email is not sent successfully");
         }
+        /*boolean b=gEmailSender.sendEmail(to,from,subject,text);
+        if(b){
+            System.out.println("email is  successfully sent");
+        }
+        else {
+            System.out.println("email is not sent successfully");
+        }*/
     }
 }
