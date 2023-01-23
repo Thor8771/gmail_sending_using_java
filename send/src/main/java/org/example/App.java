@@ -1,6 +1,7 @@
 package org.example;
 
 import org.example.email.GEmailSender;
+import java.util.Scanner;
 
 /**
  * Hello world!
@@ -10,7 +11,9 @@ public class App
 {
     public static void main( String[] args )
     {
-        String to="shubhams.21.abca@acharya.ac.in";
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter the email to send");
+        String to=sc.nextLine();
         String from="shubhamkushwaha8709@gmail.com";
         String subject=" sending email using java";
         String text="sending email using java without less secure app";
